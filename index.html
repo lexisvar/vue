@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://unpkg.com/vue"></script>
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Simple hello World -->
+        <div>
+            <span>
+                {{ message }}
+            </span>
+        </div>
+
+        <!-- Bind Title -->
+        <div>
+            <span v-bind:title="bind_title">
+                Hover your mouse over me for a few seconds
+                to see my dynamically bound title!
+            </span>
+        </div>
+
+        <!-- Conditionals -->
+        <div>
+            <p v-if="seen">Now you see me</p>
+        </div>
+
+        <!-- Loops -->
+        <div>
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <!-- Handling User Input -->
+        <div>
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+
+    </div>
+</body>
+<script src="vue.js"></script>
+</html>
